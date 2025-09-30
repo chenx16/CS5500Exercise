@@ -1,0 +1,45 @@
+import { TodoList } from './todo';
+export type FilterType = 'all' | 'completed' | 'incomplete';
+export declare class BlessedTodoUI {
+    private screen;
+    private taskList;
+    private addForm;
+    private titleInput;
+    private priorityInput;
+    private categoryInput;
+    private statusBar;
+    private errorBox;
+    private currentFilter;
+    private todoList;
+    private showingAddForm;
+    private saveFilePath;
+    constructor(todoList: TodoList, saveFilePath: string);
+    private initializeUI;
+    private createScreen;
+    private createTaskList;
+    private createAddForm;
+    private createStatusBar;
+    private createErrorBox;
+    private setupKeyHandlers;
+    refreshTaskList(): void;
+    private formatTaskForDisplay;
+    showAddTaskForm(): void;
+    private hideAddForm;
+    private saveData;
+    handleAddTask(): void;
+    private toggleTaskCompletion;
+    private deleteSelectedTask;
+    private showTaskDetails;
+    private formatTaskDetails;
+    private cycleFilter;
+    private showSearchPrompt;
+    private performSearch;
+    private getCurrentFilteredTasks;
+    setFilter(filter: FilterType): void;
+    showError(message: string): void;
+    private showSuccess;
+    clearError(): void;
+    start(): void;
+    shutdown(): void;
+}
+//# sourceMappingURL=blessed_todo.d.ts.map
